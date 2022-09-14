@@ -4,6 +4,7 @@ public class Activity {
     public String activityId, activityDescription, startDate, finishDate;
     public String activitySupervisor;
     public ArrayList<User> activityWorkers;
+    public ArrayList<User> tempWorkers;
     public ArrayList<String> tasks;
 
     public Activity(String activityId, String actitityDescription, String startDate, String finishDate, String activitySupervisor){
@@ -13,6 +14,8 @@ public class Activity {
         this.finishDate = finishDate;
         this.activitySupervisor = activitySupervisor;
         this.tasks = new ArrayList<String>();
+        this.activityWorkers = new ArrayList<User>();
+        this.tempWorkers = new ArrayList<User>();
         System.out.printf("--------------------%nAtividade criada com sucesso. %nId: %s%nDescricao: %s%nSupervisor: %s%n--------------------%n", activityId, actitityDescription, activitySupervisor);
     }
 

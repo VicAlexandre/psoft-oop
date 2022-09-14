@@ -345,7 +345,8 @@ public class Main {
                   System.out.println("5. Editar responsável pela atividade.");
                   System.out.println("6. Adicionar profissional a atividade.");
                   System.out.println("7. Adicionar tarefa a ser realizada.");
-
+                  System.out.println("8. Adicionar profissional de outro projeto.");
+                  
                   command = scan.nextInt();
                   scan.nextLine();
 
@@ -392,6 +393,11 @@ public class Main {
                         id = scan.nextLine();
                         editedActivity.tasks.add(id);
                         break;
+
+                     case 8:
+                        System.out.println("Insira o nome do usuário: ");
+                        id = scan.nextLine();
+                        editedActivity.tempWorkers.add(users.get(getUserIndex(users, id)));
                   }
                }
             } else if (command == 3) {
