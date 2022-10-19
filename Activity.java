@@ -1,22 +1,25 @@
 import java.util.ArrayList;
 
 public class Activity {
-    public String activityId, activityDescription, startDate, finishDate;
-    public String activitySupervisor;
-    public ArrayList<User> activityWorkers;
-    public ArrayList<User> tempWorkers;
-    public ArrayList<String> tasks;
+    private String activityId, activityDescription, startDate, finishDate;
+    private User activitySupervisor;
+    private ArrayList<User> activityWorkers;
+    private ArrayList<User> tempWorkers;
+    private ArrayList<String> tasks;
 
-    public Activity(String activityId, String actitityDescription, String startDate, String finishDate, String activitySupervisor){
+    public Activity(String activityId, String activityDescription, String startDate, String finishDate,
+            User activitySupervisor) {
         this.activityId = activityId;
-        this.activityDescription = actitityDescription;
+        this.activityDescription = activityDescription;
         this.startDate = startDate;
         this.finishDate = finishDate;
         this.activitySupervisor = activitySupervisor;
         this.tasks = new ArrayList<String>();
         this.activityWorkers = new ArrayList<User>();
         this.tempWorkers = new ArrayList<User>();
-        System.out.printf("--------------------%nAtividade criada com sucesso. %nId: %s%nDescricao: %s%nSupervisor: %s%n--------------------%n", activityId, actitityDescription, activitySupervisor);
+        System.out.printf(
+                "--------------------%nAtividade criada com sucesso. %nId: %s%nDescricao: %s%nSupervisor: %s%n--------------------%n",
+                activityId, activityDescription, activitySupervisor.getName());
     }
 
     public void displayActivityInfo() {
@@ -29,4 +32,69 @@ public class Activity {
         System.out.println("--------------------");
         return;
     }
-}   
+
+    public String getActivityId() {
+        return activityId;
+    }
+
+    public void setActivityId(String activityId) {
+        this.activityId = activityId;
+    }
+
+    public String getActivityDescription() {
+        return activityDescription;
+    }
+
+    public void setActivityDescription(String activityDescription) {
+        this.activityDescription = activityDescription;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getFinishDate() {
+        return finishDate;
+    }
+
+    public void setFinishDate(String finishDate) {
+        this.finishDate = finishDate;
+    }
+
+    public User getActivitySupervisor() {
+        return activitySupervisor;
+    }
+
+    public void setActivitySupervisor(User activitySupervisor) {
+        this.activitySupervisor = activitySupervisor;
+    }
+
+    public ArrayList<User> getActivityWorkers() {
+        return activityWorkers;
+    }
+
+    public void setActivityWorkers(ArrayList<User> activityWorkers) {
+        this.activityWorkers = activityWorkers;
+    }
+
+    public ArrayList<User> getTempWorkers() {
+        return tempWorkers;
+    }
+
+    public void setTempWorkers(ArrayList<User> tempWorkers) {
+        this.tempWorkers = tempWorkers;
+    }
+
+    public ArrayList<String> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(ArrayList<String> tasks) {
+        this.tasks = tasks;
+    }
+
+}
