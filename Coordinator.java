@@ -3,6 +3,7 @@ public class Coordinator extends User {
         super(name, role, login, password);
     }
 
+    @Override
     public void menu() {
         super.menu();
         System.out.println("4. Projetos\n" +
