@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.time.LocalDate;
 
 public class Main {
@@ -54,11 +55,17 @@ public class Main {
                 projectPaySpan;
 
         while (!isUserLogged) {
-            System.out.println("1. Fazer login\n" +
-                    "2. Fazer cadastro\n" +
-                    "3. Recuperar senha");
-            command = scan.nextInt();
-            scan.nextLine();
+            try {
+                System.out.println("1. Fazer login\n" +
+                        "2. Fazer cadastro\n" +
+                        "3. Recuperar senha");
+                command = scan.nextInt();
+                scan.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("\nErro: durante a navegação no menu, insira apenas números\n");
+                scan.nextLine();
+                continue;
+            }
 
             if (command == 1) {
                 System.out.println("Insira seu login");
@@ -118,9 +125,15 @@ public class Main {
                 System.out.println("Comando inválido, tente novamente");
         }
         while (true) {
-            loggedUser.menu();
-            command = scan.nextInt();
-            scan.nextLine();
+            try {
+                loggedUser.menu();
+                command = scan.nextInt();
+                scan.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("\nErro: durante a navegação no menu, insira apenas números\n");
+                scan.nextLine();
+                continue;
+            }
 
             try {
                 if (command == 0) {
