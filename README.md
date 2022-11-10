@@ -1,17 +1,16 @@
 # psoft-oop
 ## Projeto de um sistema para gerenciar projetos acadêmicos desenvolvido em Java para a disciplina Projeto de Software.
 
-=========================================================================================================================
 
-# CODE SMELLS:
+## CODE SMELLS:
 
-## Long Method:
+### Long Method:
 ###### Muitas variáveis temporárias no método main localizado em Main.java.
 
-## Lazy Class:
+### Lazy Class:
 ###### A subclasse Coordinator, que herda User, não faz o bastante para se pagar.
 
-## Message Chains:
+### Message Chains:
 ###### Alguns exemplos desse Code Smell estão localizados no método main, como por exemplo:
 ```java
 !users.get(accountIndex).getName().equals(userName)
