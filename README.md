@@ -24,7 +24,7 @@
 
 ### Bridge:
 
-###### Com o uso do padrão de projeto bridge, reduzimos bastante a lógica contida dentro do método main
+###### Com o uso do padrão de projeto bridge, reduzimos bastante a lógica contida dentro do método main. As funcionalidades agora são implementadas pelas classes AddAction, RemoveAction e EditAction, que implementam a interface Action.
 
 ### Extract Class:
 
