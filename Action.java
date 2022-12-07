@@ -1,3 +1,3 @@
-interface Action {
+public interface Action {
 
 }
